@@ -57,16 +57,16 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Ziming Cheng</a>,</span>
               <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Binrui Xu</a>,</span>
               <span class="author-block">
                 <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Institution Name<br>Conferance name and year</span>
+              <span class="author-block">Beijing University of Posts and Telecommunications<br>Conferance name and year</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
             </div>
 
@@ -84,7 +84,7 @@
                 </span>
 
                 <!-- Supplementary PDF link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -92,7 +92,7 @@
                     </span>
                     <span>Supplementary</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- Github link -->
                 <span class="link-block">
@@ -141,6 +141,67 @@
   </section>
   <!-- End teaser video -->
 
+  <!-- News -->
+  <section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">🔔News</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b> 🎉 [2025-05-01]</b>: Our paper has been accepted for <b>Spotlight (Top2.6%)</b> on ICML 2025!
+            </p>
+            <p>
+              <b>🔥 [2025-04-30]</b>: The <b><a href="#leaderboard">Leaderboard</a></b> has been updated. Currently,
+              <b>Gemini-2.5-pro-exp-03-25🥇</b>, <b>o4-mini🥈</b>, and <b>o3🥉</b> on EMMA-Mini. And VL-Rethinker-72B
+              ranks first in open source models. The case-by-case comparison between
+              <b><a href="#interactive-module"> Human Sketch and Model Response</a></b> has also been added.
+            </p>
+            <p>
+              <b>🔥 [2025-03-02]</b>: Exciting updates on the <b><a href="#leaderboard">Leaderboard</a></b>! We've added
+              <i>claude-3-7-sonnet-20250219</i> and <i>kimi-k1.5-Preview</i> performances. Currently,
+              <b>claude-3-7-sonnet-20250219🥇</b>, <b>Gemini-2.0-Flash-Thinking-exp-0121🥈</b>, and <b>o1🥉</b> on
+              EMMA-Mini.
+            </p>
+            <p>
+              <b>🔥 [2025-01-28]</b>: We've added <i>Gemini-2.0-Flash-Thinking-0121</i> and <i>QVQ-72B-Preview</i>
+              performances on the <b><a href="#leaderboard">Leaderboard</a></b>!
+            </p>
+  
+            <b>🚀 [2025-01-09]</b>: We released <b><a href="https://www.arxiv.org/abs/2501.05444">EMMA</a></b>, a
+            benchmark for advanced multimodal reasoning. 🥳
+            </p>
+          </div>
+          <!-- <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The ability to organically reason over and with both text and images is a pillar of human intelligence,
+              <b>yet the ability of Multimodal Large Language Models (MLLMs) to perform such multimodal reasoning remains
+                under-explored.</b>
+              Existing benchmarks often emphasize text-dominant reasoning or rely on shallow visual cues, failing to
+              adequately assess integrated visual and textual reasoning.
+            </p>
+            <p>
+              We introduce <img src="./static/images/emma.png"
+                style="width:5.0em; margin-top: -0.4em; vertical-align: middle;" alt="Logo" />, a benchmark targeting
+              organic multimodal reasoning across mathematics, physics, chemistry, and coding. EMMA tasks demand advanced
+              cross-modal reasoning that cannot be addressed by reasoning independently in each modality, offering an
+              enhanced test suite for MLLMs' reasoning capabilities.
+              Our evaluation of state-of-the-art MLLMs on EMMA reveals significant limitations in <b>handling complex
+                multimodal and multi-step reasoning tasks</b>, with even advanced techniques like Chain-of-Thought
+              prompting and test-time compute scaling underperforming. These findings underscore the need for improved
+              multimodal architectures and training paradigms to close the gap between human and model reasoning in
+              multimodality.
+            </p>
+          </div> -->
+          <!-- <img src="./static/images/motivation.png" alt="Motivation"
+            style="width: 100%; max-width: 1000px; margin-top: 20px;" /> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End News -->
+
   <!-- Paper abstract -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
@@ -149,11 +210,19 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus.
-              Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a
-              vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac
-              gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed
-              vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+              Recent advances in the cross-modal capabilities of large language models (LLMs) have made it routine for systems to reason over several human-supplied images and return well-grounded answers.
+              Reliable performance in such settings requires a model to pinpoint key visual cues scattered across images, integrate them, and then articulate a coherent explanation.
+              Despite marketing claims of “multi-image reasoning” prowess, today's LLMs have not been subjected to a systematic, fine-grained assessment of this skill.
+            </p>
+            <p>
+              To address this gap, we present the <b>M</b>ultimodal <b>M</b>ulti-image <b>R</b>easoning <b>B</b>enchmark (<b>MMRB</b>)—to our knowledge so far, the most comprehensive evaluation suite.
+              MMRB covers 92 generic sub-tasks and probes three complementary reasoning axes: high-level semantics, temporal relations, and spatial relations.
+              We also devise an LLM-based scoring protocol that simultaneously checks answer correctness and the fidelity of each step in the multimodal reasoning chain.
+            </p>
+            <p>
+              Empirical analysis reveals three key findings. (i) Supplying an explicit multimodal chain-of-thought prompt boosts task performance by roughly five percentage points.
+              (ii) Commercial systems enjoy a sizable lead over open-source models of comparable scale.
+              (iii) Once parameter counts exceed 32 B, the latest open models narrow the gap and approach commercial-grade performance.
             </p>
           </div>
         </div>
@@ -287,6 +356,13 @@
   <!--End BibTex citation -->
 
 
+  <!-- ClustrMaps -->
+  <div id="visitor-map" style="width: 300px; height: 300px; overflow: hidden; margin: 0 auto;">
+    <script type='text/javascript' id='clustrmaps'
+      src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=qQUEsgBhTKxPUZHOu3WPeo8jwrbjAlZIg1iOUB4KBVg'></script>
+  </div>
+  <!-- End ClustrMaps -->
+
   <footer class="footer">
     <div class="container">
       <div class="columns is-centered">
@@ -295,8 +371,8 @@
 
             <p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
               You are free to borrow the source code of this website, we just ask that you link back to this page in the
               footer. <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
