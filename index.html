@@ -25,8 +25,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>Evaluating MLLMs with Multimodal Multi-image Reasoning Benchmark</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="./static/css/mmrb.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -57,9 +58,9 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Ziming Cheng</a>,</span>
+                <a href="https://scholar.google.com/citations?&user=E_H27ksAAAAJ" target="_blank">Ziming Cheng</a>,</span>
               <span class="author-block">
-                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Binrui Xu</a>,</span>
+                <a href="https://github.com/xubinrui" target="_blank">Binrui Xu</a>,</span>
               <span class="author-block">
                 <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
               </span>
@@ -96,7 +97,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <a href="https://github.com/LesterGong/MMRB" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -123,14 +124,30 @@
     </div>
   </section>
 
-
-  <!-- Teaser video-->
   <section class="hero teaser">
     <div class="container is-max-desktop">
+      <div class="hero-body has-text-centered">
+        <!-- <h2 class="subtitle has-text-centered">
+          We encourage readers to answer the sample questions, note their approach, and check the provided answers <a
+            href="#interactive-questions" style="color: inherit; text-decoration: underline;">below</a>.
+        </h2> -->
+        <img src="./static/images/overview_of_mmrb.png" alt="MMRB Overview" style="width: 70%; height: auto; display: block; margin: 0 auto;"
+          id="MMRB_figure">
+        <h2 class="subtitle has-text-centered">
+          Overview of the MMRB.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <!-- <sectin class="hero teaser">
+    <div class="container is-max-desktop">
       <div class="hero-body">
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
           <!-- Your video here -->
-          <source src="static/videos/banner_video.mp4" type="video/mp4">
+          <!-- <source src="static/videos/banner_video.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
           Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
@@ -138,7 +155,7 @@
         </h2>
       </div>
     </div>
-  </section>
+  </section>o -->
   <!-- End teaser video -->
 
   <!-- News -->
@@ -231,6 +248,255 @@
   </section>
   <!-- End paper abstract -->
 
+  <!-- Dataset Comparison Table -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Dataset Comparison</h2>
+      <div class="table-container">
+        <table class="table is-bordered is-hoverable is-striped is-fullwidth is-size-7 has-text-centered">
+          <thead>
+            <tr>
+              <th>Datasets</th>
+              <th>Year</th>
+              <th>Domain</th>
+              <th>Sub-tasks</th>
+              <th>Samples</th>
+              <th>Total Reasoning Steps</th>
+              <th>Avg Reasoning Steps</th>
+              <th>Avg Images</th>
+              <th>Multiple Solutions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CoMT</td>
+              <td>2024</td>
+              <td>Math, General</td>
+              <td>4</td>
+              <td>3,853</td>
+              <td>29,706</td>
+              <td>7.71</td>
+              <td>3.84</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>WorldQA</td>
+              <td>2024</td>
+              <td>General</td>
+              <td>1</td>
+              <td>1,007</td>
+              <td>4,481</td>
+              <td>4.45</td>
+              <td>2.41</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>MiCEval</td>
+              <td>2024</td>
+              <td>General</td>
+              <td>8</td>
+              <td>643</td>
+              <td>2,889</td>
+              <td>4.49</td>
+              <td>1</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>MME-CoT</td>
+              <td>2025</td>
+              <td>Science, Math, General</td>
+              <td>23</td>
+              <td>1,130</td>
+              <td>3,865</td>
+              <td>3.42</td>
+              <td>2.95</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>VisualProcessBench</td>
+              <td>2025</td>
+              <td>Math, Science</td>
+              <td>5</td>
+              <td>2,866</td>
+              <td>26,950</td>
+              <td>9.40</td>
+              <td>1</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>SVIP-Test</td>
+              <td>2025</td>
+              <td>General</td>
+              <td>10</td>
+              <td>1,934</td>
+              <td>5,509</td>
+              <td>2.85</td>
+              <td>1</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>M3CoT</td>
+              <td>2025</td>
+              <td>Science, Math, General</td>
+              <td>17</td>
+              <td>11,459</td>
+              <td>124,903</td>
+              <td>10.90</td>
+              <td>0.98</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td>VRC-Bench</td>
+              <td>2025</td>
+              <td>Science, Math, General</td>
+              <td>8</td>
+              <td>1,000</td>
+              <td>4,173</td>
+              <td>4.17</td>
+              <td>1</td>
+              <td><span class="has-text-danger">✘</span></td>
+            </tr>
+            <tr>
+              <td><strong>MMRB (Ours)</strong></td>
+              <td><strong>2025</strong></td>
+              <td><strong>General</strong></td>
+              <td><strong>92</strong></td>
+              <td><strong>4,750</strong></td>
+              <td><strong>68,882</strong></td>
+              <td><strong>4.83</strong></td>
+              <td><strong>6.17</strong></td>
+              <td><strong>Avg 1.93</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- End Dataset Comparison Table -->
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2 mmmu">
+        <span class="mmmu">Multimodal Multi-image Reasoning Benchmark</span>
+      </h1>
+    </div>
+  </section>
+
+  <section class="section", style="margin-top: -2rem;">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              We first present an overview of our Multimodal Multi-image Reasoning Benchmark. The key statistics are shown in Table X.
+              Our benchmark consists of <b>4,750 samples</b> encompassing <b>68,882 reasoning steps</b> across <b>92 sub-tasks</b>, covering semantic, spatial, and temporal reasoning.
+              Notably, each sample contains an average of 6.17 images and 1.93 distinct solutions.
+              During the annotation process, we also corrected a horrifying 355 incorrect ground truths from the source datasets, which could have resulted in up to a 14% deviation in our benchmark if left uncorrected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop" style="margin-top: 2rem;">
+      <!-- <h2 class="title is-3 has-text-centered">Statistics</h2> -->
+      <div class="table-container">
+        <table class="table is-bordered is-striped is-fullwidth is-size-6 has-text-centered">
+          <thead>
+            <tr>
+              <th>Statistics</th>
+              <th>Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sub-Tasks</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td>Multiple-choice tasks</td>
+              <td>73</td>
+            </tr>
+            <tr>
+              <td>Free-form tasks</td>
+              <td>19</td>
+            </tr>
+            <tr>
+              <td>Total Samples</td>
+              <td>4750</td>
+            </tr>
+            <tr>
+              <td>Total Images</td>
+              <td><strong>29293</strong></td>
+            </tr>
+            <tr>
+              <td>Avg Image per Sample</td>
+              <td>6.17</td>
+            </tr>
+            <tr>
+              <td>Total Reasoning Steps</td>
+              <td>68882</td>
+            </tr>
+            <tr>
+              <td>Correct Steps</td>
+              <td>62687</td>
+            </tr>
+            <tr>
+              <td>Incorrect Steps</td>
+              <td>6195</td>
+            </tr>
+            <tr>
+              <td>Avg Reasoning Steps per Sample</td>
+              <td>4.83</td>
+            </tr>
+            <tr>
+              <td>Avg Solutions per Sample</td>
+              <td>1.93</td>
+            </tr>
+            <tr>
+              <td>Avg Question Length</td>
+              <td><strong>492.67</strong></td>
+            </tr>
+            <tr>
+              <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td>Corrected Wrong Ground Truth</td>
+              <td>355</td>
+            </tr>
+            <tr>
+              <td>Corrected GPT-4o Reasoning Paths</td>
+              <td>2884</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data Construction Pipeline -->
+    <div class="container" style="margin-top: 2rem;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Data Construction Pipeline</h2>
+          <div class="content has-text-justified">
+            <p>
+            <ol>
+              <li><b>Task Selection & Creation</b>: </li>
+              <li><b>Reasoning Steps Annotation</b>: </li>
+              <li><b>Manual Inspection and Correction</b>: </li>
+            </ol>
+            </p>
+          </div>
+          <img src="./static/images/data-pipeline-and-evaluation.png" alt="Motivation"
+            style="width: 100%; max-width: 1000px; margin-top: 20px;" />
+        </div>
+      </div>
+    </div>
+    <!-- End -->
+  </section>
 
   <!-- Image carousel -->
   <section class="hero is-small">
