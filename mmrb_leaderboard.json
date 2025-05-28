@@ -1,0 +1,43 @@
+{
+  "leaderboardData": [
+    {
+      "info": {
+        "name": "Model A",
+        "type": "open_source"
+      },
+      "scores": {
+        "answer": 78.2,
+        "answer_cot": 81.5,
+        "process": 76.4,
+        "relevance": 85.0,
+        "efficacy": 80.3
+      }
+    },
+    {
+      "info": {
+        "name": "Model B",
+        "type": "proprietary"
+      },
+      "scores": {
+        "answer": 82.0,
+        "answer_cot": 86.1,
+        "process": 79.9,
+        "relevance": 87.2,
+        "efficacy": 84.5
+      }
+    },
+    {
+      "info": {
+        "name": "Human Expert",
+        "type": "human_expert"
+      },
+      "scores": {
+        "answer": 95.0,
+        "answer_cot": 96.3,
+        "process": 94.5,
+        "relevance": 98.0,
+        "efficacy": 97.2
+      }
+    }
+  ]
+}

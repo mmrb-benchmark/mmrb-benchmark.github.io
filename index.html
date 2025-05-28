@@ -43,6 +43,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <script src="./static/js/mmrb.js"></script>
 </head>
 
 <body>
@@ -497,6 +499,55 @@
     </div>
     <!-- End -->
   </section>
+
+  <!-- Leaderboard -->
+  <section class="section">
+    <div class="container">
+      <!-- -------------------------------------------------------------------- Leaderboard Section -------------------------------------------------------------------->
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+          <div class="leaderboard-description">
+            Accuracy scores on both EMMA and EMMA-mini. Click on EMMA or EMMA-mini to expand detailed results.
+          </div>
+          <br>
+          <div class="model-labels-container">
+            <span class="leaderboard-label human_expert">Human Expert</span>
+            <span class="leaderboard-label open_source">Open-Source</span>
+            <span class="leaderboard-label proprietary">Proprietary</span>
+          </div>
+          <br>
+  
+          <div class="leaderboard-container">
+            <div class="table-wrapper">
+              <table id="mmrb-table">
+                <thead>
+                  <tr>
+                    <th colspan="6" class="reset-cell clickable" style="text-align: center;">Reset</th>
+                  </tr>
+                  <tr>
+                    <th class="sortable clickable" data-sort="string">Baseline</th>
+                    <th class="sortable clickable" data-sort="number">Answer Score</th>
+                    <th class="sortable clickable" data-sort="number">Answer Score \w CoT</th>
+                    <th class="sortable clickable" data-sort="number">Process Score</th>
+                    <th class="sortable clickable" data-sort="number">Relevance Rate</th>
+                    <th class="sortable clickable" data-sort="number">Efficacy Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+  
+                </tbody>
+              </table>
+              <p class="test-desc">Overall results of different models on the EMMA leaderboard.
+                The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>.*:
+                results provided by the authors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End -->
 
   <!-- Image carousel -->
   <section class="hero is-small">
