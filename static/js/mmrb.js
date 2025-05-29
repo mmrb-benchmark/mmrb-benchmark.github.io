@@ -131,4 +131,5 @@ function resetMMRBTable() {
   tbody.innerHTML = ''; // 清空表格
   document.querySelectorAll('#mmrb-table th').forEach(th => th.classList.remove('asc', 'desc'));
   loadMMRBTableData();  // 重新加载原始顺序
+  initializeMMRBSorting();
 }
