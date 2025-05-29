@@ -2,41 +2,434 @@
   "leaderboardData": [
     {
       "info": {
-        "name": "Model A",
-        "type": "open_source"
+        "name": "GPT-4o-20241120",
+        "type": "NrAM"
       },
       "scores": {
-        "answer": 78.2,
-        "answer_cot": 81.5,
-        "process": 76.4,
-        "relevance": 85.0,
-        "efficacy": 80.3
+        "outcome": 57.88,
+        "outcome_cot": 64.04,
+        "process": 83.70,
+        "efficacy": 6.16
       }
     },
     {
       "info": {
-        "name": "Model B",
-        "type": "proprietary"
+        "name": "GPT-4o-mini-20240718",
+        "type": "NrAM"
       },
       "scores": {
-        "answer": 82.0,
-        "answer_cot": 86.1,
-        "process": 79.9,
-        "relevance": 87.2,
-        "efficacy": 84.5
+        "outcome": 47.71,
+        "outcome_cot": 57.92,
+        "process": 79.90,
+        "efficacy": 10.21
       }
     },
     {
       "info": {
-        "name": "Model C",
-        "type": "human_expert"
+        "name": "Claude-3.7-sonnet-0219",
+        "type": "NrAM"
       },
       "scores": {
-        "answer": 95.0,
-        "answer_cot": 96.3,
-        "process": 94.5,
-        "relevance": 98.0,
-        "efficacy": 97.2
+        "outcome": 62.56,
+        "outcome_cot": 64.33,
+        "process": 81.88,
+        "efficacy": 1.77
+      }
+    },
+    {
+      "info": {
+        "name": "Gemini-2.5-flash-0417",
+        "type": "NrAM"
+      },
+      "scores": {
+        "outcome": 62.61,
+        "outcome_cot": 69.95,
+        "process": 82.24,
+        "efficacy": 7.34
+      }
+    },
+    {
+      "info": {
+        "name": "GPT-o1-20241217",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 72.04,
+        "outcome_cot": 73.36,
+        "process": 79.31,
+        "efficacy": 1.32
+      }
+    },
+    {
+      "info": {
+        "name": "GPT-o4-mini-20250416",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 69.29,
+        "outcome_cot": 71.23,
+        "process": 80.01,
+        "efficacy": 1.94
+      }
+    },
+    {
+      "info": {
+        "name": "Claude-3.7-sonnet-think",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 62.07,
+        "outcome_cot": 65.98,
+        "process": 85.76,
+        "efficacy": 3.91
+      }
+    },
+    {
+      "info": {
+        "name": "Gemini-2.5-flash-think",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 71.53,
+        "outcome_cot": 71.43,
+        "process": 82.13,
+        "efficacy": -0.10
+      }
+    },
+    {
+      "info": {
+        "name": "grok-3-think",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 44.68,
+        "outcome_cot": 47.16,
+        "process": 84.41,
+        "efficacy": 2.48
+      }
+    },
+    {
+      "info": {
+        "name": "Gemini-2.5-pro-exp-0325",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 73.86,
+        "outcome_cot": 71.38,
+        "process": 89.78,
+        "efficacy": -2.48
+      }
+    },
+    {
+      "info": {
+        "name": "Gemini-2.5-pro-exp-0325",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 73.86,
+        "outcome_cot": 71.38,
+        "process": 89.78,
+        "efficacy": -2.48
+      }
+    },
+    {
+      "info": {
+        "name": "Gemini-2.5-pro-exp-0325",
+        "type": "RAM"
+      },
+      "scores": {
+        "outcome": 73.86,
+        "outcome_cot": 71.38,
+        "process": 89.78,
+        "efficacy": -2.48
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2VL-2B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 39.51,
+        "outcome_cot": 36.30,
+        "process": 3.32,
+        "efficacy": -3.21
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2VL-7B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 56.57,
+        "outcome_cot": 54.50,
+        "process": 5.77,
+        "efficacy": -2.07
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5VL-3B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 46.99,
+        "outcome_cot": 45.15,
+        "process": 45.12,
+        "efficacy": -1.84
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5VL-7B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 56.03,
+        "outcome_cot": 56.66,
+        "process": 65.87,
+        "efficacy": 0.63
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5VL-32B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 64.45,
+        "outcome_cot": 62.49,
+        "process": 79.92,
+        "efficacy": -1.96
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-Omni-3B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 50.01,
+        "outcome_cot": 50.44,
+        "process": 9.78,
+        "efficacy": 0.43
+      }
+    },
+    {
+      "info": {
+        "name": "Qwen2.5-Omni-7B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 50.11,
+        "outcome_cot": 46.51,
+        "process": 17.74,
+        "efficacy": -3.60
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL2.5-1B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 31.97,
+        "outcome_cot": 33.00,
+        "process": 12.65,
+        "efficacy": 1.03
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL2.5-2B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 37.12,
+        "outcome_cot": 37.60,
+        "process": 12.20,
+        "efficacy": 0.48
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL2.5-8B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 44.17,
+        "outcome_cot": 42.78,
+        "process": 49.84,
+        "efficacy": -1.39
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL2.5-26B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 47.87,
+        "outcome_cot": 47.44,
+        "process": 22.60,
+        "efficacy": -0.43
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL2.5-38B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 52.67,
+        "outcome_cot": 55.35,
+        "process": 59.19,
+        "efficacy": 2.68
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-1B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 30.33,
+        "outcome_cot": 26.25,
+        "process": 37.16,
+        "efficacy": -4.08
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-2B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 38.61,
+        "outcome_cot": 38.58,
+        "process": 39.65,
+        "efficacy": -0.03
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-8B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 46.66,
+        "outcome_cot": 48.76,
+        "process": 59.74,
+        "efficacy": 2.10
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-9B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 47.82,
+        "outcome_cot": 48.81,
+        "process": 35.27,
+        "efficacy": 0.99
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-14B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 56.44,
+        "outcome_cot": 58.50,
+        "process": 65.48,
+        "efficacy": 2.06
+      }
+    },
+    {
+      "info": {
+        "name": "InternVL3-38B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 54.27,
+        "outcome_cot": 58.72,
+        "process": 70.93,
+        "efficacy": 4.45
+      }
+    },
+    {
+      "info": {
+        "name": "LLaVA-OneVision-0.5B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 35.12,
+        "outcome_cot": 33.01,
+        "process": 3.81,
+        "efficacy": -2.11
+      }
+    },
+    {
+      "info": {
+        "name": "LLaVA-OneVision-7B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 47.33,
+        "outcome_cot": 43.99,
+        "process": 7.86,
+        "efficacy": -3.34
+      }
+    },
+    {
+      "info": {
+        "name": "MiniCPM-V-2.6-8B",
+        "type": "NrOM"
+      },
+      "scores": {
+        "outcome": 50.19,
+        "outcome_cot": 46.48,
+        "process": 60.42,
+        "efficacy": -3.71
+      }
+    },
+    {
+      "info": {
+        "name": "R1-OneVision-7B-RL",
+        "type": "ROM"
+      },
+      "scores": {
+        "outcome": 1.00,
+        "outcome_cot": 1.00,
+        "process": 69.90,
+        "efficacy": 0.00
+      }
+    },
+    {
+      "info": {
+        "name": "Skywork-R1V2-38B",
+        "type": "ROM"
+      },
+      "scores": {
+        "outcome": 0.00,
+        "outcome_cot": 0.00,
+        "process": 0.00,
+        "efficacy": 0.00
+      }
+    },
+    {
+      "info": {
+        "name": "QVQ-72B-Preview",
+        "type": "ROM"
+      },
+      "scores": {
+        "outcome": 0.00,
+        "outcome_cot": 0.00,
+        "process": 0.00,
+        "efficacy": 0.00
       }
     }
   ]

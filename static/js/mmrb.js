@@ -33,10 +33,9 @@ function loadMMRBTableData() {
 
         tr.innerHTML = `
           <td><b>${row.info.name}</b></td>
-          <td>${apply(row.scores.answer, scores.answer[index])}</td>
-          <td>${apply(row.scores.answer_cot, scores.answer_cot[index])}</td>
+          <td>${apply(row.scores.outcome, scores.outcome[index])}</td>
+          <td>${apply(row.scores.outcome_cot, scores.outcome_cot[index])}</td>
           <td>${apply(row.scores.process, scores.process[index])}</td>
-          <td>${apply(row.scores.relevance, scores.relevance[index])}</td>
           <td>${apply(row.scores.efficacy, scores.efficacy[index])}</td>
         `;
         tbody.appendChild(tr);
@@ -58,7 +57,7 @@ function loadMMRBTableData() {
 }
 
 function prepareScoresForStylingMMRB(data) {
-  const fields = ['answer', 'answer_cot', 'process', 'relevance', 'efficacy'];
+  const fields = ['outcome', 'outcome_cot', 'process', 'efficacy'];
   const scores = {};
 
   fields.forEach(field => {

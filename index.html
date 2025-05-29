@@ -512,9 +512,14 @@
           </div>
           <br>
           <div class="model-labels-container">
-            <span class="leaderboard-label human_expert">Type1</span>
-            <span class="leaderboard-label open_source">Type2</span>
-            <span class="leaderboard-label proprietary">Type3</span>
+            <p>
+              <span class="leaderboard-label NrAM">Non-reasoning-specialized API Model</span>
+              <span class="leaderboard-label RAM">Reasoning-specialized API Model</span>
+            </p>
+            <p>
+              <span class="leaderboard-label NrOM">Non-reasoning-specialized Open-source Model</span>
+              <span class="leaderboard-label ROM">Reasoning-specialized Open-source Model</span>
+            </p>
           </div>
           <br>
   
@@ -526,11 +531,11 @@
                     <th colspan="6" class="reset-cell clickable" style="text-align: center;">Reset</th>
                   </tr>
                   <tr>
-                    <th class="sortable clickable" data-sort="string">Baseline</th>
-                    <th class="sortable clickable" data-sort="number">Answer Score</th>
-                    <th class="sortable clickable" data-sort="number">Answer Score \w CoT</th>
+                    <th class="sortable clickable" data-sort="string">Model</th>
+                    <th class="sortable clickable" data-sort="number">Outcome Score</th>
+                    <th class="sortable clickable" data-sort="number">Outcome Score \w CoT</th>
                     <th class="sortable clickable" data-sort="number">Process Score</th>
-                    <th class="sortable clickable" data-sort="number">Relevance Rate</th>
+                    <!-- <th class="sortable clickable" data-sort="number">Relevance Rate</th> -->
                     <th class="sortable clickable" data-sort="number">Efficacy Score</th>
                   </tr>
                 </thead>
