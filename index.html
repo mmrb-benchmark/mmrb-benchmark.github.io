@@ -55,7 +55,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Evaluating MLLMs with Multimodal Multi-image Reasoning Benchmark
+            <h1 class="title is-2 publication-title">Evaluating MLLMs with
+              <p>
+              <u>M</u>ultimodal <u>M</u>ulti-image <u>R</u>easoning <u>B</u>enchmark
+              </p>
             </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
@@ -69,9 +72,30 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Beijing University of Posts and Telecommunications<br>Conferance name and year</span>
-              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications, Beijing, China</span>
+              <p style="white-space: nowrap;">
+                <span class="author-block" style="display: inline-block; margin-right: 1em;">
+                  <sup>2</sup>National University of Singapore, Singapore
+                </span>
+                <span class="author-block" style="display: inline-block; margin-right: 1em;">
+                  <sup>3</sup>Li Auto Inc., Beijing, China
+                </span>
+                <span class="author-block" style="display: inline-block;">
+                  <sup>4</sup>SenseTime Research, Beijing, China
+                </span>
+              </p>
             </div>
+
+            <div class="is-size-6 has-text-centered">
+              <!-- <p><sup>*</sup>Equal contribution <sup>§</sup>Core contribution <sup>†</sup>Project lead</p> -->
+              <p>
+                <span style="margin-right: 1em;"><sup>*</sup>Equal contribution</span>
+                <span style="margin-right: 1em;"><sup>§</sup>Core contribution</span>
+                <span><sup>†</sup>Project lead</span>
+              </p>
+            </div>
+
+            
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -222,26 +246,19 @@
   <!-- End News -->
 
   <!-- Paper abstract -->
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
+  <section class="section hero">
+    <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Recent advances in the cross-modal capabilities of large language models (LLMs) have made it routine for systems to reason over several human-supplied images and return well-grounded answers.
-              Reliable performance in such settings requires a model to pinpoint key visual cues scattered across images, integrate them, and then articulate a coherent explanation.
-              Despite marketing claims of “multi-image reasoning” prowess, today's LLMs have not been subjected to a systematic, fine-grained assessment of this skill.
-            </p>
-            <p>
-              To address this gap, we present the <b>M</b>ultimodal <b>M</b>ulti-image <b>R</b>easoning <b>B</b>enchmark (<b>MMRB</b>)—to our knowledge so far, the most comprehensive evaluation suite.
-              MMRB covers 92 generic sub-tasks and probes three complementary reasoning axes: high-level semantics, temporal relations, and spatial relations.
-              We also devise an LLM-based scoring protocol that simultaneously checks answer correctness and the fidelity of each step in the multimodal reasoning chain.
-            </p>
-            <p>
-              Empirical analysis reveals three key findings. (i) Supplying an explicit multimodal chain-of-thought prompt boosts task performance by roughly five percentage points.
-              (ii) Commercial systems enjoy a sizable lead over open-source models of comparable scale.
-              (iii) Once parameter counts exceed 32 B, the latest open models narrow the gap and approach commercial-grade performance.
+              With enhanced capabilities and widespread applications, Multi-modal Large Language Models (MLLMs) are increasingly required to process and reason over multiple images simultaneously.
+              However, existing MLLM benchmarks focus either on single-image visual reasoning or on multi-image understanding tasks with only final-answer evaluation, leaving the reasoning capabilities of MLLMs
+              over multi-image inputs largely underexplored. To address this gap, we introduce the Multimodal <b>Multi-image Reasoning Benchmark (MMRB)</b>, the first benchmark designed to
+              evaluate structured visual reasoning across multiple images. MMRB comprises <b>92 sub-tasks</b> covering spatial, temporal, and semantic reasoning, with multi-solution, CoT-style annotations generated by GPT-4o
+              and refined by human experts. A derivative subset is designed to evaluate multimodal reward models in multi-image scenarios. To support fast and scalable evaluation, we propose a sentence-level
+              matching framework using open-source LLMs. Extensive baseline experiments on <b>40 MLLMs</b>, including 8 reasoning-specific models and 5 reward models, demonstrate that XXXXXX.
             </p>
           </div>
         </div>
@@ -377,6 +394,7 @@
   <!-- End Dataset Comparison Table -->
 
 
+  <!-- Benchmark -->
   <section class="hero is-light is-small">
     <div class="hero-body has-text-centered">
       <h1 class="title is-2 mmmu">
@@ -405,78 +423,7 @@
 
     <div class="container is-max-desktop" style="margin-top: 2rem;">
       <!-- <h2 class="title is-3 has-text-centered">Statistics</h2> -->
-      <div class="table-container">
-        <table class="table is-bordered is-striped is-fullwidth is-size-6 has-text-centered">
-          <thead>
-            <tr>
-              <th>Statistics</th>
-              <th>Number</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Sub-Tasks</td>
-              <td>92</td>
-            </tr>
-            <tr>
-              <td>Multiple-choice tasks</td>
-              <td>73</td>
-            </tr>
-            <tr>
-              <td>Free-form tasks</td>
-              <td>19</td>
-            </tr>
-            <tr>
-              <td>Total Samples</td>
-              <td>4750</td>
-            </tr>
-            <tr>
-              <td>Total Images</td>
-              <td><strong>29293</strong></td>
-            </tr>
-            <tr>
-              <td>Avg Image per Sample</td>
-              <td>6.17</td>
-            </tr>
-            <tr>
-              <td>Total Reasoning Steps</td>
-              <td>68882</td>
-            </tr>
-            <tr>
-              <td>Correct Steps</td>
-              <td>62687</td>
-            </tr>
-            <tr>
-              <td>Incorrect Steps</td>
-              <td>6195</td>
-            </tr>
-            <tr>
-              <td>Avg Reasoning Steps per Sample</td>
-              <td>4.83</td>
-            </tr>
-            <tr>
-              <td>Avg Solutions per Sample</td>
-              <td>1.93</td>
-            </tr>
-            <tr>
-              <td>Avg Question Length</td>
-              <td><strong>492.67</strong></td>
-            </tr>
-            <tr>
-              <td colspan="2">&nbsp;</td>
-            </tr>
-            <tr>
-              <td>Corrected Wrong Ground Truth</td>
-              <td>355</td>
-            </tr>
-            <tr>
-              <td>Corrected GPT-4o Reasoning Paths</td>
-              <td>2884</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </div>  
 
     <!-- Data Construction Pipeline -->
     <div class="container" style="margin-top: 2rem;">
@@ -486,22 +433,34 @@
           <div class="content has-text-justified">
             <p>
             <ol>
-              <li><b>Task Selection & Creation</b>: </li>
-              <li><b>Reasoning Steps Annotation</b>: </li>
-              <li><b>Manual Inspection and Correction</b>: </li>
+              <li><b>Task Selection & Creation</b>: We first surveyed 22 multi-image datasets and collected 242 tasks, then filtered
+                and categorized them into semantic, temporal, and spatial reasoning types following the <a href="https://mmiu-bench.github.io/" target="_blank">MMIU</a> taxonomy.
+                Using ChatGPT-4o with chain-of-thought (CoT) prompting, we further selected 101 reasoning-focused tasks for annotation,
+                excluding hard math problems to better target general multi-image understanding.
+              </li>
+              <li><b>Reasoning Steps Annotation</b>: For each multi-image reasoning task, we prompt GPT-4o to generate three diverse reasoning
+                trajectories, each composed of step-by-step explanations. These steps are categorized into six types—<b>Task Understanding</b>,
+                <b>Information Grounding</b>, <b>Commonsense Seeking</b>, <b>Logical Reasoning</b>, <b>Arithmetic Calculating</b>, and <b>Drawing Conclusion</b>—based on refined cognitive operations.
+                This results in rich, multi-path annotated tasks that reflect varied reasoning strategies leading to the same answer.
+              </li>
+              <li><b>Manual Inspection and Correction</b>: To ensure annotation quality, we conducted a rigorous human verification process.
+                A team of 17 trained annotators manually reviewed and corrected both reasoning steps and final answers generated by GPT-4o.
+                In total, <b>25%</b> of samples had at least one reasoning step revised, and <b>7.5%</b> had their final answers corrected—highlighting the importance of human oversight in building a high-quality benchmark.
+              </li>
             </ol>
             </p>
           </div>
           <img src="./static/images/data-pipeline-and-evaluation.png" alt="Motivation"
-            style="width: 100%; max-width: 1000px; margin-top: 20px;" />
+            style="width: 100%; max-width: 1000px; margin-top: 10px;" />
         </div>
       </div>
     </div>
     <!-- End -->
   </section>
+  <!-------------------------------------------End Benchmark--------------------------------------------------->
 
   <!-- Leaderboard -->
-  <section class="section">
+  <section class="section" style="margin-top: -2rem;">
     <div class="container">
       <!-- -------------------------------------------------------------------- Leaderboard Section -------------------------------------------------------------------->
       <div class="columns is-centered m-6">
@@ -544,8 +503,8 @@
                 </tbody>
               </table>
               <p class="test-desc">Overall results of different models on the MMRB leaderboard.
-                The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>.*:
-                results provided by the authors.</p>
+                The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>.
+              </p>
             </div>
           </div>
         </div>
