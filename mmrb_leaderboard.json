@@ -122,30 +122,6 @@
     },
     {
       "info": {
-        "name": "Gemini-2.5-pro-exp-0325",
-        "type": "RAM"
-      },
-      "scores": {
-        "outcome": 73.86,
-        "outcome_cot": 71.38,
-        "process": 89.78,
-        "efficacy": -2.48
-      }
-    },
-    {
-      "info": {
-        "name": "Gemini-2.5-pro-exp-0325",
-        "type": "RAM"
-      },
-      "scores": {
-        "outcome": 73.86,
-        "outcome_cot": 71.38,
-        "process": 89.78,
-        "efficacy": -2.48
-      }
-    },
-    {
-      "info": {
         "name": "Qwen2VL-2B",
         "type": "NrOM"
       },
