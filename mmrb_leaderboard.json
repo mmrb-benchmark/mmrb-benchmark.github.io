@@ -378,10 +378,10 @@
         "type": "ROM"
       },
       "scores": {
-        "outcome": 1.00,
-        "outcome_cot": 1.00,
+        "outcome": 52.93,
+        "outcome_cot": 52.29,
         "process": 69.90,
-        "efficacy": 0.00
+        "efficacy": -0.64
       }
     },
     {
@@ -390,10 +390,10 @@
         "type": "ROM"
       },
       "scores": {
-        "outcome": 0.00,
-        "outcome_cot": 0.00,
-        "process": 0.00,
-        "efficacy": 0.00
+        "outcome": 45.21,
+        "outcome_cot": 45.59,
+        "process": 77.50,
+        "efficacy": 0.38
       }
     },
     {
@@ -402,10 +402,10 @@
         "type": "ROM"
       },
       "scores": {
-        "outcome": 0.00,
-        "outcome_cot": 0.00,
-        "process": 0.00,
-        "efficacy": 0.00
+        "outcome": 52.36,
+        "outcome_cot": 51.47,
+        "process": 82.38,
+        "efficacy": -0.89
       }
     }
   ]
