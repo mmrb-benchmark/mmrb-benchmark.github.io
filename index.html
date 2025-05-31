@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="./static/css/mmrb.css">
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -43,8 +44,21 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
   <script src="./static/js/mmrb.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      bulmaCarousel.attach('#pdf-carousel', {
+        slidesToScroll: 1,  
+        slidesToShow: 1,    
+        loop: true,         
+        autoplay: true,     
+        autoplaySpeed: 5000 
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -57,7 +71,7 @@
           <div class="column has-text-centered">
             <h1 class="title is-2 publication-title">Evaluating MLLMs with
               <p>
-              <u>M</u>ultimodal <u>M</u>ulti-image <u>R</u>easoning <u>B</u>enchmark
+                <u>M</u>ultimodal <u>M</u>ulti-image <u>R</u>easoning <u>B</u>enchmark
               </p>
             </h1>
             <div class="is-size-5 publication-authors">
@@ -95,27 +109,33 @@
                 <a href="https://liyanlin06.github.io/" target="_blank">Yanlin Li</a><sup>2,*</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=Y60nkyIAAAAJ&hl=en" target="_blank">Lei Ren</a><sup>3</sup>,
+                <a href="https://scholar.google.com/citations?user=Y60nkyIAAAAJ&hl=en" target="_blank">Lei
+                  Ren</a><sup>3</sup>,
               </span>
               <span class="author-block">
                 <a href="https://openreview.net/profile?id=~Chen_Wei10" target="_blank">Wei Chen</a><sup>3</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=1nXBSWkAAAAJ&hl=zh-CN" target="_blank">Zhiyuan Huang</a><sup>4</sup>,
+                <a href="https://scholar.google.com/citations?user=1nXBSWkAAAAJ&hl=zh-CN" target="_blank">Zhiyuan
+                  Huang</a><sup>4</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=ov38_QYAAAAJ&hl=zh-CN" target="_blank">Mingjie Zhang</a><sup>4</sup>,
+                <a href="https://scholar.google.com/citations?user=ov38_QYAAAAJ&hl=zh-CN" target="_blank">Mingjie
+                  Zhang</a><sup>4</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.cz/citations?user=-RtarngAAAAJ&hl=zh-CN" target="_blank">Xiaojie Wang</a><sup>1</sup>,
+                <a href="https://scholar.google.cz/citations?user=-RtarngAAAAJ&hl=zh-CN" target="_blank">Xiaojie
+                  Wang</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=W0O_dfoAAAAJ&hl=en" target="_blank">Fangxiang Feng</a><sup>1</sup>
+                <a href="https://scholar.google.com/citations?user=W0O_dfoAAAAJ&hl=en" target="_blank">Fangxiang
+                  Feng</a><sup>1</sup>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications, Beijing, China</span>
+              <span class="author-block"><sup>1</sup>Beijing University of Posts and Telecommunications, Beijing,
+                China</span>
               <p style="white-space: nowrap;">
                 <span class="author-block" style="display: inline-block; margin-right: 1em;">
                   <sup>2</sup>National University of Singapore, Singapore
@@ -138,7 +158,7 @@
               </p>
             </div>
 
-            
+
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -153,16 +173,24 @@
                   </a>
                 </span>
 
-                <!-- Supplementary PDF link -->
-                <!-- <span class="link-block">
-                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>Supplementary</span>
+                    <span>arXiv</span>
                   </a>
-                </span> -->
+                </span>
+
+                <!-- Huggingface -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="font-size:18px">🤗</span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
 
                 <!-- Github link -->
                 <span class="link-block">
@@ -175,16 +203,14 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
+                <!-- Leaderborar -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
+                  <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon has-text-white">🏆</span>
+                    <span>Leaderboard</span>
                   </a>
                 </span>
+
               </div>
             </div>
           </div>
@@ -200,10 +226,11 @@
           We encourage readers to answer the sample questions, note their approach, and check the provided answers <a
             href="#interactive-questions" style="color: inherit; text-decoration: underline;">below</a>.
         </h2> -->
-        <img src="./static/images/overview_of_mmrb.png" alt="MMRB Overview" style="width: 55%; height: auto; display: block; margin: 0 auto;"
-          id="MMRB_figure">
+        <img src="./static/images/overview_of_mmrb.png" alt="MMRB Overview"
+          style="width: 55%; height: auto; display: block; margin: 0 auto;" id="MMRB_figure">
         <h2 class="subtitle has-text-centered">
-          Overview of the MMRB benchmark, which evaluates MLLMs on 92 multi-image-only sub-tasks annotated with reasoning steps.
+          Overview of the MMRB benchmark, which evaluates MLLMs on 92 multi-image-only sub-tasks annotated with
+          reasoning steps.
         </h2>
       </div>
     </div>
@@ -215,8 +242,8 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
-          <!-- Your video here -->
-          <!-- <source src="static/videos/banner_video.mp4" type="video/mp4">
+  <!-- Your video here -->
+  <!-- <source src="static/videos/banner_video.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
           Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
@@ -253,7 +280,7 @@
               <b>🔥 [2025-01-28]</b>: We've added <i>Gemini-2.0-Flash-Thinking-0121</i> and <i>QVQ-72B-Preview</i>
               performances on the <b><a href="#leaderboard">Leaderboard</a></b>!
             </p> -->
-  
+
             <p>
               <b>🚀 [2025-05-30]</b>: We released 🥳
             </p>
@@ -296,13 +323,20 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              With enhanced capabilities and widespread applications, Multi-modal Large Language Models (MLLMs) are increasingly required to process and reason over multiple images simultaneously.
-              However, existing MLLM benchmarks focus either on single-image visual reasoning or on multi-image understanding tasks with only final-answer evaluation, leaving the reasoning capabilities of MLLMs
-              over multi-image inputs largely underexplored. To address this gap, we introduce the Multimodal <b>Multi-image Reasoning Benchmark (MMRB)</b>, the first benchmark designed to
-              evaluate structured visual reasoning across multiple images. MMRB comprises <b>92 sub-tasks</b> covering spatial, temporal, and semantic reasoning, with multi-solution, CoT-style annotations generated by GPT-4o
-              and refined by human experts. A derivative subset is designed to evaluate multimodal reward models in multi-image scenarios. To support fast and scalable evaluation, we propose a sentence-level
-              matching framework using open-source LLMs. Extensive baseline experiments on <b>40 MLLMs</b>, including 8 reasoning-specific models and 5 reward models, demonstrate that open-source MLLMs still lag
-              significantly behind commercial MLLMs in multi-image reasoning tasks. Furthermore, current multimodal reward models are nearly incapable of handling multi-image reward ranking tasks.
+              With enhanced capabilities and widespread applications, Multi-modal Large Language Models (MLLMs) are
+              increasingly required to process and reason over multiple images simultaneously.
+              However, existing MLLM benchmarks focus either on single-image visual reasoning or on multi-image
+              understanding tasks with only final-answer evaluation, leaving the reasoning capabilities of MLLMs
+              over multi-image inputs largely underexplored. To address this gap, we introduce the Multimodal
+              <b>Multi-image Reasoning Benchmark (MMRB)</b>, the first benchmark designed to
+              evaluate structured visual reasoning across multiple images. MMRB comprises <b>92 sub-tasks</b> covering
+              spatial, temporal, and semantic reasoning, with multi-solution, CoT-style annotations generated by GPT-4o
+              and refined by human experts. A derivative subset is designed to evaluate multimodal reward models in
+              multi-image scenarios. To support fast and scalable evaluation, we propose a sentence-level
+              matching framework using open-source LLMs. Extensive baseline experiments on <b>40 MLLMs</b>, including 8
+              reasoning-specific models and 5 reward models, demonstrate that open-source MLLMs still lag
+              significantly behind commercial MLLMs in multi-image reasoning tasks. Furthermore, current multimodal
+              reward models are nearly incapable of handling multi-image reward ranking tasks.
             </p>
           </div>
         </div>
@@ -320,7 +354,7 @@
     </div>
   </section>
 
-  <section class="section", style="margin-top: -2rem;">
+  <section class="section" , style="margin-top: -2rem;">
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <!-- <div class="column is-full-width has-text-centered"> -->
@@ -329,10 +363,12 @@
           <div class="content has-text-justified">
             <p>
               We first present an overview of our Multimodal Multi-image Reasoning Benchmark.
-              Our benchmark consists of <b>4,750 samples</b> encompassing <b>68,882 reasoning steps</b> across <b>92 sub-tasks</b>,
+              Our benchmark consists of <b>4,750 samples</b> encompassing <b>68,882 reasoning steps</b> across <b>92
+                sub-tasks</b>,
               covering <b>semantic</b>, <b>spatial</b>, and <b>temporal</b> reasoning.
               Notably, each sample contains an average of <b>6.17 images</b> and <b>1.93 distinct solutions</b>.
-              During the annotation process, we also corrected a horrifying <b>355 incorrect ground truths</b> from the source datasets,
+              During the annotation process, we also corrected a horrifying <b>355 incorrect ground truths</b> from the
+              source datasets,
               which could have resulted in up to a <b>14% deviation</b> in our benchmark if left uncorrected.
             </p>
           </div>
@@ -353,7 +389,7 @@
 
     <div class="container is-max-desktop" style="margin-top: 2rem;">
       <!-- <h2 class="title is-3 has-text-centered">Statistics</h2> -->
-    </div>  
+    </div>
 
     <!-- Data Construction Pipeline -->
     <div class="container" style="margin-top: 2rem;">
@@ -363,19 +399,29 @@
           <div class="content has-text-justified">
             <p>
             <ol>
-              <li><b>Task Selection & Creation</b>: We first surveyed 22 multi-image datasets and collected 242 tasks, then filtered
-                and categorized them into semantic, temporal, and spatial reasoning types following the <a href="https://mmiu-bench.github.io/" target="_blank">MMIU</a> taxonomy.
-                Using ChatGPT-4o with chain-of-thought (CoT) prompting, we further selected 101 reasoning-focused tasks for annotation,
+              <li><b>Task Selection & Creation</b>: We first surveyed 22 multi-image datasets and collected 242 tasks,
+                then filtered
+                and categorized them into semantic, temporal, and spatial reasoning types following the <a
+                  href="https://mmiu-bench.github.io/" target="_blank">MMIU</a> taxonomy.
+                Using ChatGPT-4o with chain-of-thought (CoT) prompting, we further selected 101 reasoning-focused tasks
+                for annotation,
                 excluding hard math problems to better target general multi-image understanding.
               </li>
-              <li><b>Reasoning Steps Annotation</b>: For each multi-image reasoning task, we prompt GPT-4o to generate three diverse reasoning
-                trajectories, each composed of step-by-step explanations. These steps are categorized into six types—<b>Task Understanding</b>,
-                <b>Information Grounding</b>, <b>Commonsense Seeking</b>, <b>Logical Reasoning</b>, <b>Arithmetic Calculating</b>, and <b>Drawing Conclusion</b>—based on refined cognitive operations.
-                This results in rich, multi-path annotated tasks that reflect varied reasoning strategies leading to the same answer.
+              <li><b>Reasoning Steps Annotation</b>: For each multi-image reasoning task, we prompt GPT-4o to generate
+                three diverse reasoning
+                trajectories, each composed of step-by-step explanations. These steps are categorized into six
+                types—<b>Task Understanding</b>,
+                <b>Information Grounding</b>, <b>Commonsense Seeking</b>, <b>Logical Reasoning</b>, <b>Arithmetic
+                  Calculating</b>, and <b>Drawing Conclusion</b>—based on refined cognitive operations.
+                This results in rich, multi-path annotated tasks that reflect varied reasoning strategies leading to the
+                same answer.
               </li>
-              <li><b>Manual Inspection and Correction</b>: To ensure annotation quality, we conducted a rigorous human verification process.
-                A team of 17 trained annotators manually reviewed and corrected both reasoning steps and final answers generated by GPT-4o.
-                In total, <b>25%</b> of samples had at least one reasoning step revised, and <b>7.5%</b> had their final answers corrected—highlighting the importance of human oversight in building a high-quality benchmark.
+              <li><b>Manual Inspection and Correction</b>: To ensure annotation quality, we conducted a rigorous human
+                verification process.
+                A team of 17 trained annotators manually reviewed and corrected both reasoning steps and final answers
+                generated by GPT-4o.
+                In total, <b>25%</b> of samples had at least one reasoning step revised, and <b>7.5%</b> had their final
+                answers corrected—highlighting the importance of human oversight in building a high-quality benchmark.
               </li>
             </ol>
             </p>
@@ -397,8 +443,10 @@
         <div class="column is-full has-text-centered content">
           <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
           <div class="leaderboard-description">
-            We select 40 MLLMs for our baseline experiment, including 10 commercial models and 24 open-source models ranging from 0.5B to 38B parameters,
-            among which 9 are specifically designed for reasoning. We use <b>outcome score</b> (Rule-based), <b>process score</b> and <b>efficacy score</b> (LLM-based) for metric.
+            We select 40 MLLMs for our baseline experiment, including 10 commercial models and 24 open-source models
+            ranging from 0.5B to 38B parameters,
+            among which 9 are specifically designed for reasoning. We use <b>outcome score</b> (Rule-based), <b>process
+              score</b> and <b>efficacy score</b> (LLM-based) for metric.
           </div>
           <br>
           <div class="model-labels-container">
@@ -412,7 +460,7 @@
             </p>
           </div>
           <br>
-  
+
           <div class="leaderboard-container">
             <div class="table-wrapper">
               <table id="mmrb-table">
@@ -430,7 +478,7 @@
                   </tr>
                 </thead>
                 <tbody>
-  
+
                 </tbody>
               </table>
               <p class="test-desc">Overall results of different models on the MMRB leaderboard.
@@ -444,44 +492,102 @@
   </section>
   <!-- End -->
 
-  <!-- Image carousel -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              First image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Second image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Third image description.
-            </h2>
-          </div>
-          <div class="item">
-            <!-- Your image here -->
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
-            <h2 class="subtitle has-text-centered">
-              Fourth image description.
-            </h2>
+  <!-- MMRB Case Examples Section -->
+  <section class="section" style="margin-top: -5rem;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Examples</h2>
+
+      <div id="pdf-carousel" class="carousel results-carousel">
+
+        <!-- IQ Test -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_IQ_Test.png" data-lightbox="mmrb-cases" data-title="IQ Test">
+              <img src="./static/images/Example_IQ_Test.png" alt="IQ Test" class="case-image" />
+            </a>
+            <p>IQ Test</p>
           </div>
         </div>
+        <!-- Face Retrieval -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_Face_Retrieval.png" data-lightbox="mmrb-cases" data-title="Face Retrieval">
+              <img src="./static/images/Example_Face_Retrieval.png" alt="Face Retrieval" class="case-image" />
+            </a>
+            <p>Face Retrieval</p>
+          </div>
+        </div>
+
+        <!-- Webpage QA -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_Webpage_QA.png" data-lightbox="mmrb-cases" data-title="Webpage QA">
+              <img src="./static/images/Example_Webpage_QA.png" alt="Webpage QA" class="case-image" />
+            </a>
+            <p>Webpage QA</p>
+          </div>
+        </div>
+
+        <!-- Geopraphic Understanding -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_Geographic_Understanding.png" data-lightbox="mmrb-cases"
+              data-title="Geopraphic Understanding">
+              <img src="./static/images/Example_Geographic_Understanding.png" alt="Geopraphic Understanding"
+                class="case-image" />
+            </a>
+            <p>Geopraphic Understanding</p>
+          </div>
+        </div>
+
+        <!-- MathVerse -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_MathVerse.png" data-lightbox="mmrb-cases" data-title="MathVerse">
+              <img src="./static/images/Example_MathVerse.png" alt="MathVerse" class="case-image" />
+            </a>
+            <p>MathVerse</p>
+          </div>
+        </div>
+
+        <!-- Comic Panel Identification -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_Comic_Panel_Identification.png" data-lightbox="mmrb-cases"
+              data-title="Comic Panel Identification">
+              <img src="./static/images/Example_Comic_Panel_Identification.png" alt="Comic Panel Identification"
+                class="case-image" />
+            </a>
+            <p>Comic Panel Identification</p>
+          </div>
+        </div>
+
+        <!-- Visual Cloze -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_Visual_Cloze.png" data-lightbox="mmrb-cases" data-title="Visual Cloze">
+              <img src="./static/images/Example_Visual_Cloze.png" alt="Visual Cloze" class="case-image" />
+            </a>
+            <p>Visual Cloze</p>
+          </div>
+        </div>
+
+        <!-- Visual Referring -->
+        <div class="box case-box">
+          <div class="content has-text-centered">
+            <a href="./static/images/Example_Visual_Referring.png" data-lightbox="mmrb-cases"
+              data-title="Visual Referring">
+              <img src="./static/images/Example_Visual_Referring.png" alt="Visual Referring" class="case-image" />
+            </a>
+            <p>Visual Referring</p>
+          </div>
+        </div>
+
       </div>
+
+      <!-- <p class="has-text-centered">More examples detailed in the paper.</p> -->
     </div>
   </section>
-  <!-- End image carousel -->
 
 
 
@@ -490,14 +596,14 @@
   <!-- <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container"> -->
-        <!-- Paper video. -->
-        <!-- <h2 class="title is-3">Video Presentation</h2>
+  <!-- Paper video. -->
+  <!-- <h2 class="title is-3">Video Presentation</h2>
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
 
             <div class="publication-video"> -->
-              <!-- Youtube embed code here -->
-              <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+  <!-- Youtube embed code here -->
+  <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
             </div>
           </div>
@@ -516,20 +622,20 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item item-video1">
             <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
-              <!-- Your video file here -->
-              <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
+  <!-- Your video file here -->
+  <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-video2">
             <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
-              <!-- Your video file here -->
-              <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
+  <!-- Your video file here -->
+  <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-video3">
             <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
-              <!-- Your video file here -->
-              <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
+  <!-- Your video file here -->
+  <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -559,13 +665,13 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <div class="box" style="position: relative; margin-top: 2.5rem;">
-  
+
         <!-- 更大的复制按钮 -->
         <button id="copyBibtexBtn" class="button is-normal is-info is-rounded" aria-label="Copy BibTeX"
           style="position: absolute; top: 0.5rem; right: 0.5rem;">
           <span class="icon"><i class="fas fa-copy"></i></span>
         </button>
-  
+
         <!-- 去掉多余的换行和缩进 -->
         <pre style="overflow-x: auto;"><code id="bibtexCode">BibTeX Here 1</code></pre>
       </div>
@@ -600,18 +706,20 @@
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
-  
+
             <p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                 target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page, and also draws inspiration from
-              <a href="https://mmiu-bench.github.io/" target="_blank">MMIU</a> and <a href="https://emma-benchmark.github.io/" target="_blank">EMMA</a>.
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page, and also draws inspiration
+              from
+              <a href="https://mmiu-bench.github.io/" target="_blank">MMIU</a> and <a
+                href="https://emma-benchmark.github.io/" target="_blank">EMMA</a>.
               You are free to borrow the source code of this website, we just ask that you link back to this page in the
               footer. <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
-  
+
           </div>
         </div>
       </div>
